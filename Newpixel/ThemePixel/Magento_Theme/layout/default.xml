@@ -7,6 +7,12 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!--my container-->
+        <container name="map.container" as="mapContainer" label="map container" htmlTag="div" htmlClass="map-container">
+          <block class="Magento\Framework\View\Element\Template" name="myblock" template="Magento_Theme::myview.phtml"/>
+        </container>
+        <move element="map.container" destination="header.panel" before="-" />
+        <!--my container-->
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
@@ -23,13 +29,7 @@
         <referenceContainer name="footer">
             <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
         </referenceContainer>
-        <!--my container-->
-        <container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar sidebar-additional" after="div.sidebar.main">
-            <block class="Magento\Framework\View\Element\Template" name="myview" template="Magento_Theme::myview.phtml" before="-">
-            </block>
-            <container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
-        </container>
-        <!--my container-->
+      
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
     </body>
