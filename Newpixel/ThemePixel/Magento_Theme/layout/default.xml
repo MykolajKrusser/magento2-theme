@@ -25,6 +25,8 @@
         </referenceContainer>
         <!--my container-->
         <container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar sidebar-additional" after="div.sidebar.main">
+            <block class="Magento\Framework\View\Element\Template" name="myview" template="Magento_Theme::myview.phtml" before="-">
+            </block>
             <container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
         </container>
         <!--my container-->
