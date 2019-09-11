@@ -1,0 +1,792 @@
+// /**
+//  * Copyright © 2016 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Luma theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@icons__font-path: '@{baseDir}fonts/Luma-Icons';
+@icons__font-name: 'luma-icons';
+
+//  Color nesting
+@panel__background-color: @color-gray-light0;
+@border-color__base: @color-gray80;
+
+//  Headings
+@h3__font-weight: @font-weight__semibold;
+@h3__margin-top: @indent__base;
+
+//
+//  Tables
+//  ---------------------------------------------
+
+@table-cell__padding-vertical: 11px;
+@table-cell-stripped__background-color: @table-cell__hover__background-color;
+@table-responsive-th__background-color: @table-cell-stripped__background-color;
+@table-responsive-cell__padding: @indent__xs @indent__s;
+
+//
+//  Layout grid
+//  ---------------------------------------------
+
+@total-columns: 24;
+
+//  Variables for layout columns
+@layout-column__sidebar-width: 5;
+
+//  Checkout columns width
+@layout-column-checkout__width-left: 6;
+
+//
+//  Navigation
+//  ---------------------------------------------
+
+@navigation__background: @color-gray94;
+@navigation-level0-item__active__color: @primary__color;
+@submenu-item__active__color: @navigation-level0-item__active__color;
+
+//  Desktop navigation
+@navigation-desktop-level0-item__line-height: 47px;
+@submenu-desktop__font-weight: @font-weight__regular;
+@submenu-desktop-item__active__color: @navigation-level0-item__active__color;
+
+//  Tabs
+@tab-control__font-weight: @font-weight__regular;
+@tab-control__height: @indent__base*2;
+@tab-control__margin-right: -1px;
+@tab-control__padding-top: 1px;
+@tab-control__padding-right: 35px;
+
+//  Tabs content
+@tab-content__padding-top: 35px;
+@tab-content__padding-right: @tab-control__padding-right;
+
+//
+//  Accordion
+//  ---------------------------------------------
+
+@accordion-control__font-family: false;
+@accordion-control__font-size: @font-size__base;
+@accordion-control__font-style: false;
+@accordion-control__font-weight: @font-weight__semibold;
+@accordion-control__border-right: false;
+@accordion-control__border-bottom: false;
+@accordion-control__border-left: false;
+@accordion-control__background-color: false;
+@accordion-control__color: @primary__color;
+@accordion-control__hover__background-color: false;
+@accordion-control__hover__color: @accordion-control__color;
+@accordion-control__active__background-color: false;
+@accordion-control__active__color: @accordion-control__color;
+@accordion-control__margin-bottom: 0;
+@accordion-control__padding-right: @indent__s;
+@accordion-control__padding-left: @indent__s;
+@accordion-content__border: false;
+@accordion-content__margin: 0;
+@accordion-content__padding: @indent__s @indent__s @indent__l;
+
+//
+//  Buttons
+//  ---------------------------------------------
+
+@button__font-weight: @font-weight__semibold;
+
+//  Default = secondary button
+@button__background: @color-gray-darken0;
+@button__border: 1px solid @border-color__base;
+@button__hover__color: @button__color;
+@button__hover__background: darken(@button__background, 5%);
+@button__active__background: @color-gray-darken1;
+
+//  Primary button
+@button-primary__hover__color: @color-white;
+@button-primary__active__background: @link__hover__color;
+@button-primary__active__border: 1px solid @link__hover__color;
+@button-primary__active__color: @color-white;
+
+//  Button with icon
+@button-icon__line-height: @icon-font__line-height;
+
+//
+//  Icons
+//  ---------------------------------------------
+
+@icon-wishlist-empty: false;
+@icon-comment-reflected: false;
+@icon-compare-empty: false;
+@icon-arrow-up-thin: false;
+@icon-arrow-right-thin: false;
+@icon-arrow-left-thin: false;
+@icon-arrow-down-thin: false;
+@icon-wishlist-empty: '\e601';
+
+//
+//  Messages
+//  ---------------------------------------------
+
+@message__padding: 12px @indent__base 12px @indent__m;
+@message__line-height: false;
+@message-icon__font-size: 24px;
+@message-icon__inner-padding-left: 45px;
+@message-icon__top: 22px;
+@message-error-icon: @icon-error;
+@message-success-icon: @icon-success;
+
+//
+//  Loaders
+//  ---------------------------------------------
+
+@loader-overlay__background-color: rgba(255, 255, 255, .7);
+
+//
+//  Forms
+//  ---------------------------------------------
+
+//  Form fieldset
+@form-fieldset-legend__font-size: 18px;
+@form-fieldset-legend__font-weight: @font-weight__light;
+@form-fieldset-legend__margin: 0 0 @indent__base;
+@form-fieldset-legend__padding: 0 0 @indent__s;
+@form-fieldset-legend__width: 100%;
+
+//  Form field
+@form-field-type-revert: false;
+@form-field__additional-vertical-indent: @indent__s;
+
+//  Form field label
+@form-field-label__font-weight: @font-weight__semibold;
+@form-field-type-label-block__margin: 0 0 8px;
+
+//  Form field note icon
+@form-field-note-icon-font__content: false;
+
+//
+//  Pager
+//  ---------------------------------------------
+
+@pager__font-weight: @font-weight__regular;
+@pager__line-height: @indent__l;
+@pager-item__margin: 0 8px 0 0;
+@pager-item__padding: 0 @indent__xs;
+
+//  Pager current page
+@pager-current__background: @color-gray90;
+
+//  Pager link.action
+@pager-icon__font-margin: 0;
+@pager-icon__font-size: 16px;
+
+//  Pager link.action visited
+@pager-action__visited__color: @text__color__muted;
+
+//  Pager link.action hover
+@pager-action__hover__color: @text__color__muted;
+
+//  Pager link.action active
+@pager-action__active__color: @text__color__muted;
+
+//
+//  Rating
+//  ---------------------------------------------
+
+@rating-icon__font-size: 16px;
+@rating-icon__letter-spacing: 2px;
+@rating-icon__active__color: @active__color;
+
+//
+//  Dropdowns
+//  ---------------------------------------------
+
+@dropdown-toggle-icon__content: @icon-down;
+@dropdown-toggle-icon__active__content: @icon-up;
+@dropdown-toggle-icon__font-size: 12px;
+
+//  Split dropdown
+@dropdown-split-actions__padding: 0 @indent__xs;
+@dropdown-split-toggle__actions__padding: false;
+
+//  Actions-toolbar
+@actions-toolbar-actions__position: left;
+@actions-toolbar-actions-primary__margin: 0 15px 0 0;
+
+//
+//  Breadcrumbs
+//  ---------------------------------------------
+
+@breadcrumbs__container-margin: 0 0 15px;
+@breadcrumbs-icon__font-size: 10px;
+@breadcrumbs-icon__font-margin: 0 @indent__s;
+
+//
+//  Popups
+//  ---------------------------------------------
+
+@popup__border: 1px solid @color-gray68;
+@popup-title-headings__level: h2;
+
+//  Popup icons
+@popup-icon-font__size: 16px;
+@popup-icon-font__line-height: 16px;
+@popup-icon-font__color: @color-gray55;
+@popup-icon-font__color-hover: darken(@popup-icon-font__color, 10%);
+@popup-icon-font__color-active: @popup-icon-font__color-hover;
+
+//  Window overlay
+@overlay__background: @color-gray55;
+@overlay__opacity: .7;
+@overlay__opacity-old: 70;
+
+@gallery-thumb-border-color-active: @active__color;
+
+//  Checkout tooltip icon
+@checkout-tooltip-icon__font-size: 21px;
+
+// Checkout Payment Option icon
+@checkout-payment-option-title-icon__font-size: 14px;
+@checkout-payment-option-title-icon__line-height: 16px;
+@checkout-payment-option-title-icon__margin: 0 0 0 @indent__s;
+
+// Checkout Sidebar Shipping Information
+@checkout-sidebar-shipping-information-edit-icon__content: @icon-edit;
+@checkout-sidebar-shipping-information-edit-icon__font-size: 18px;
+@checkout-sidebar-shipping-information-edit-icon__line-height: 20px;
+@checkout-sidebar-shipping-information-edit-icon__top: @indent__s;
+
+// Checkout
+@checkout-sidebar__columns: 8;
+
+
+
+
+
+
+@import "includes/_mixins";
+@import "includes/_variables";
+@import "includes/_navigation";
+
+
+// our custom css
+
+
+
+body{
+  color: @base-text-color;
+}
+
+a:hover,
+a:focus,
+a:visited,
+.alink:visited{
+  color: @base-pink-color;
+}
+
+.account .messages {
+  margin-top: 20px;
+}
+
+.page-header .switcher .options ul.dropdown a:visited, .page-footer .switcher .options ul.dropdown a:visited,
+.page-header .switcher .options ul.dropdown a, .page-footer .switcher .options ul.dropdown a,
+.customer-welcome li a,
+.customer-welcome li a:visited{
+  color: @base-text-color;
+}
+.page-header .switcher .options ul.dropdown li:hover, .page-footer .switcher .options ul.dropdown li:hover{
+  background: @base-bg-dark-color;
+}
+
+.opc-wrapper .step-title{
+  border-color: @base-border-color;
+}
+
+.custom-slide .modal-inner-wrap{
+  background-color: @base-bg-color;
+}
+
+.block.related .product-item-details{
+  z-index: 2;
+}
+
+.opc-wrapper .shipping-address-item.selected-item:after,
+.opc-progress-bar-item._active:before,
+.opc-progress-bar-item._active > span:before { background: @base-pink-color;}
+.opc-wrapper .shipping-address-item.selected-item { border-color:@base-pink-color}
+.rating-summary .rating-result > span:before,
+.review-control-vote label:before { color: @base-pink-color;}
+
+button,
+.block-compare .action.primary,
+.cart-discount .actions-toolbar .action.primary{
+  background-color: @base-pink-color;
+  border: 0;
+  color: @white;
+  .box-shadow(none) !important;
+  .border-radius(0);
+  .transition(all .2s ease-in);
+
+  &:hover,
+  &:focus
+  &:active{
+    background: @black;
+    border: 0;
+    color: @white;
+    .box-shadow(none);
+    .border-radius(0);
+  }
+}
+
+.action.primary {
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @black;
+    background: @black;
+  }
+
+  &.apply {
+    height: 32px;
+    line-height: 32px;
+    padding-top: 0;
+  }
+}
+
+.cart-discount {
+  .block {
+    .title {
+      text-align: left;
+      strong {
+        color: @base-text-color;
+      }
+    }
+  }
+}
+
+.checkout-index-index {
+
+  .footer-contact-info,
+  .smo-info { display: none;}
+}
+
+.cart-summary { position: static;}
+
+.page-wrapper > .page-bottom { padding: 0;}
+
+.header.links .link.wishlist .counter{ color: @base-border-dark-color;}
+
+.action.delete{
+
+  &:before{
+    color: @base-text-color !important;
+    font-weight: bold !important;
+    .transition(all .2s ease-in-out);
+
+  }
+  &:hover{
+    &:before{
+      color: @base-pink-color !important;
+    }
+  }
+
+}
+
+.block-reorder .product-item .field.item{ .inline-block();}
+
+
+
+
+// modified css
+
+.cms-home{
+
+  .page-main{
+    max-width: none;
+    padding: 0;
+
+    .block{ margin-bottom: 20px;}
+    .columns .column.main{ padding-bottom: 10px;}
+  }
+
+
+
+  .products-grid .product-items{
+    max-width: 1280px;
+    margin: auto !important;
+  }
+
+}
+
+.page-title-wrapper{
+  .page-title{
+    text-transform: uppercase;
+    color: @black;
+  }
+}
+
+.nav-sections{
+  margin-bottom: 0;
+}
+
+
+
+// some common css
+ul{
+  list-style: none;
+  margin: 0;
+}
+
+a{ color: @base-text-color;
+  &:hover,
+  &:focus{ text-decoration: none !important;}
+  &:visited{
+    color: inherit;
+  }
+}
+.buy-now-btn{
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgba(0,0,0,0.3);
+  border: 2px solid @white;
+  font-size: 20px;
+  color: @white;
+  text-transform: uppercase;
+  margin: 25px 0;
+  .border-radius(20px);
+  .transition(all .2s ease-in);
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    background: #000;
+    color:@white;
+  }
+}
+
+.blank-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+.next-prev-btn-mixin(){
+  float: right;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: @base-border-color;
+  border: 1px solid @base-border-color;
+  .border-radius(50%);
+  margin: 3px 10px 0 0;
+  position: relative;
+
+  > label{ display: none;}
+
+  &:before{
+    content:'\e257';
+    display: inline-block;
+    .glyphicons-font();
+    font-size: 20px;
+    color: @black;
+    .transition(all .2s ease-in);
+    position: relative;
+    z-index: 1;
+  }
+  &:after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: @base-pink-color;
+    .border-radius(50%);
+    .transition(all .2s ease-in);
+  }
+  &:hover,
+  &:focus,
+  &:active{
+    &:after{
+      width: 100%;
+      height: 100%;
+    }
+    &:before{
+      color: @white;
+    }
+  }
+  &:active{
+    &:after{
+      background: @black;
+    }
+  }
+}
+
+.next-btn-mixin(){
+  &:before{
+    content:'\e258';
+  }
+}
+
+.prev-btn,
+.next-btn{
+  .next-prev-btn-mixin();
+}
+.next-btn{
+  .next-btn-mixin();
+}
+
+
+.smo-ellipse{
+  width: 40px;
+  height: 40px;
+  .inline-block();
+  background: #ababa9;
+  border: 2px solid @white;
+  .border-radius(50%);
+  margin-right: 5px;
+  text-align: center;
+  .transition(all 0.2s ease-in);
+
+  &:hover{
+    background: @base-pink-color;
+  }
+
+}
+
+
+
+@import "includes/_home-main-slider";
+@import "includes/_home-page-bar";
+@import "includes/_home-category-boxes";
+
+// common title
+.title-common{
+  max-width: 1280px;
+  margin: auto auto 30px;
+  text-align: center;
+  font-size: 26px;
+  color: @black;
+  text-transform: uppercase;
+  border-top: 1px solid @base-border-color;
+  border-bottom: 1px solid @base-border-color;
+  padding-right: 90px;
+  position: relative;
+
+  .title-text{
+    overflow: hidden;
+    padding: 5px 0;
+  }
+
+  .next-btn{
+    position: absolute;
+    right: 0;
+  }
+  .prev-btn{
+    position: absolute;
+    right: 50px;
+  }
+
+}
+
+@import "includes/_products";
+
+@import "includes/_sidebar";
+
+@import "includes/_pagination";
+
+.toolbar{
+
+  select{
+    background-color: transparent;
+    .box-shadow(none);
+    border-color: @base-border-color;
+  }
+
+}
+
+.toolbar-sorter{
+
+  .sorter-action{
+    .white-bordered-box();
+
+    &:before{
+      color: @base-pink-color;
+      .transition(all .2s ease-in);
+    }
+
+    &:hover{
+      &:before{
+        color: @white;
+      }
+    }
+
+  }
+
+  .sorter-label{
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+}
+
+.field.limiter label{ text-transform: uppercase;}
+
+.modes *{
+  border-color: @base-border-color;
+  border-radius: 0 !important;
+  background: @white;
+  .box-shadow(none);
+  .transition(all .2s ease-in);
+
+  &:before{
+    color: @base-pink-color;
+    .transition(all .2s ease-in);
+  }
+
+  &:hover,
+  &.active{
+    background: @base-pink-color;
+    border-color: @base-pink-color;
+    .box-shadow(none);
+
+
+    &:before{
+      color: @white;
+    }
+
+  }
+}
+
+
+@import "includes/_home-search-bar";
+
+@import "includes/_minicart";
+
+@import "includes/_home-company-info";
+
+
+@import "includes/_home-brands";
+
+@import "includes/_home-footer";
+
+
+
+// order summary modified css
+
+.opc-block-summary{
+  background: @base-bg-color;
+
+  .minicart-items .product .toggle > span{ position: static;}
+
+  .item-options{
+
+    .label{
+      clear: both;
+      float: left;
+      &:after{
+        content: ':';
+        .inline-block();
+        font-weight: bold;
+        margin: 0 5px;
+      }
+    }
+    .values{
+      float: left;
+    }
+
+  }
+}
+
+.opc-block-shipping-information{ padding-bottom: 1px;}
+
+.sidebar{
+  .product-items{
+    .product-item-actions{
+      .action.tocart{
+        padding: 5px;
+      }
+    }
+  }
+  .block-compare .counter, .block-wishlist .counter{
+    float: right;
+    text-transform: uppercase;
+  }
+}
+
+.checkout-onepage-success{
+
+  .checkout-success{
+    text-align: center;
+    padding-top: 30px;
+
+    .actions-toolbar{
+      text-align: center;
+
+      .primary{
+        float: none;
+      }
+
+    }
+
+  }
+}
+
+.checkout-cart-index{
+  .page-main{ text-align: center;}
+}
+
+.table-comparison{
+  background: @base-bg-color;
+  border: 1px solid @base-border-color;
+
+  tbody + tbody{
+    tr{
+      &:nth-child(odd){
+        background: @base-bg-dark-color;
+      }
+    }
+
+  }
+
+  .cell{
+    border-color: @base-border-color !important;
+  }
+
+  .action.delete{
+    &:before{
+      margin-bottom: -20px;
+    }
+
+  }
+
+}
+
+.page-footer{
+  .block.newsletter .action.subscribe{ padding-top: 5px; padding-bottom: 5px;}
+}
+
+p:empty { display: none; margin: 0;}
+
+@import "includes/_media";
+
+.navigation .level0.parent .level-top .ui-menu-icon:after { color: @base-text-color;}
+
+
+// end of our custom css
